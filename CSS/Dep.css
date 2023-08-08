@@ -1,0 +1,29 @@
+body
+{
+    background-color: grey;
+}
+
+button
+{
+    background-color: blue;
+    color: white;
+}
+
+#u
+{
+font-size: 50px;
+list-style: none;
+text-align: center;
+}
+
+#l
+{
+float: left;
+margin: 80px;
+}
+
+a
+{
+text-decoration: none;
+color: white;
+}

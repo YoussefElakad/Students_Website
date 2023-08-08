@@ -1,0 +1,25 @@
+<html>
+    
+    <head>
+        <title>Login Page</title> 
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/Login.css'%}">
+    </head>
+    
+<body style>
+
+<h1>Login</h1> <br> <br>
+<form method = "POST">
+<label>Email: </label> 
+<input type="Email" name = "email"> <br> <br>
+<label>Password: </label> 
+<input type="password" name = "password"><br><br>
+<button type = "submit"><a href="{% url 'home' %}"> Login</a></button>
+</form>
+
+ <br>
+
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<html>  
+    <head>
+        <title>Departement selection</title>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/Dep.css'%}">
+
+    </head> 
+    <body>
+        
+        <h1>
+            <ul id = "u">
+                <li> <a href="{% url 'Add' %}"> Add Student</a></li>
+                <li> <a href="{% url 'Edit' %}"> Edit Students</a></li>
+                <li> <a href="{% url 'Search' %}"> Search Student</a></li>
+                <li> <a href="{% url 'View' %}"> View Students</a></li>
+                        
+          </ul></h1> <br><br><br><br><br><br><br><br><br><br><br><br>
+        
+          <hr>
+          <hr>
+        
+        
+        <h1> <p>  Departement Page   </p> </h1> <br><br>
+
+              
+      <ul type="bolts">
+        
+       <LI>  <h3>Name: <input type="text"  placeholder= "StudentName" id="nameInp"></h3>     </LI>     
+    
+     <LI>  <h3>ID: <input type="number"  placeholder= "studentID" id="idInp"></h3> </LI>  
+        
+      <LI>    <h3> Level:
+            <select >
+            
+                <option>1</option>
+                <option> 2</option>
+                <option> 3</option>
+                <option> 4</option>
+
+            </select>
+            </h3>
+        </LI>  
+        
+    <LI>  <h3>Choose departement:
+            <select >
+                <option>computer science</option>
+                <option>information system </option>
+                <option>information technology</option>
+                <option>decision support</option>
+                <option>Artifical intelligence</option>
+            </select>
+        </h3>
+    </LI>  <br><br>
+    <button onclick="submitFunc()">Submit</button>
+
+
+        
+    <script src ="{% static 'js/department.js' %}"  ></script>    
+    </body> 
+</html>

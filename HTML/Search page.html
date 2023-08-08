@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title> Search Page </title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/Search.css'%}">
+</head>
+
+<body>
+    <h1>
+        <ul>
+            <li> <a href="{% url 'Add' %}"> Add Student</a></li>
+            <li> <a href="{% url 'Edit' %}"> Edit Students</a></li>
+            <li> <a href="{% url 'Search' %}"> Search Student</a></li>
+            <li> <a href="{% url 'View' %}"> View Students</a></li>
+                    
+      </ul></h1> <br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+<hr>        
+
+    <h1>Search For Student..</h1>
+    <br>
+    <form onsubmit="validateSearch();" method="post">
+        {% csrf_token %}
+        <input type="search" required placeholder="Enter Name" id="name">
+        <input type="submit" value="search">
+    </form>
+
+    <br>
+    <hr>
+    
+    <hr>
+    <h1>Student Status..</h1>
+    <table border="5">
+        <thead>
+            <tr>
+                <td>Student Name</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in students %}
+            <tr>
+                
+                <td height="30px">{{s.fname}}</td>
+                <td height="30px">{{s.status}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+
+   
+
+    <br>
+    <hr>
+    <hr>
+
+    <button><a href="{% url 'Departement' %}"> Assign Students Department</a>
+
+        
+        <script src ="{% static 'js/Search.js' %}"  ></script>
+</body>
+
+</html>

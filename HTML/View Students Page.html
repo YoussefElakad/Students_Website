@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8" name="View All Students">
+        <title> View Page</title>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/View.css'%}">
+
+    </head>
+    <body>
+        <h1>
+            <ul>
+                <li> <a href="{% url 'Add' %}"> Add Student</a></li>
+                <li> <a href="{% url 'Edit' %}"> Edit Students</a></li>
+                <li> <a href="{% url 'Search' %}"> Search Student</a></li>
+                <li> <a href="{% url 'View' %}"> View Students</a></li>
+                        
+          </ul></h1> <br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+<hr>        
+        <h2> View All Students </h2>
+        <form method="POST">
+            <table border = 4>
+                <tr>
+                    <th style="color: rgb(7, 7, 129); width: 0%;" > Student Name</th>
+                    <th style="color: rgb(7, 7, 129); width: 60%;" > Student Status</th>
+                </tr>
+
+                {% for s in stu %}
+                <tr>
+                    
+                    <td>{{s.fname}}</td>
+                    <td>{{s.status}}</td>
+                    
+                </tr>
+                {% endfor %}
+
+            </table>
+
+    
+        </form>
+        
+
+
+
+    </body>
+</html>

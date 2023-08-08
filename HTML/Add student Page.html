@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta charset="utf-8" name="Add student">
+    <title>Add Student</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/Add.css'%}">
+
+  </head>
+  <body>
+    <h1>
+      <ul>
+          <li> <a href="{% url 'Add' %}"> Add Student</a></li>
+          <li> <a href="{% url 'Edit' %}"> Edit Students</a></li>
+          <li> <a href="{% url 'Search' %}"> Search Student</a></li>
+          <li> <a href="{% url 'View' %}"> View Students</a></li>
+                  
+    </ul></h1> <br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+<hr>        
+<h2>Add Student</h2><br>
+<form name="form1" onsubmit ="validation()" method="POST">
+  
+  {% csrf_token %}
+  <label for="fname">First Name : </label><br>
+  <input type="text" name="fname"><br>
+  <label for="lname">Last Name : </label><br>
+  <input type="text" name="lname"><br>
+<label for="id">ID : </label> <br>
+<input type="text" name="id"><br>
+<label for="DB">Date of Birth : </label><br>
+<input type="date" name="DB"><br>
+<label for="gpa">GPA : </label><br>
+<input type="" name="gpa"><br>
+<label for="gen">Gender : </label><br>
+<input type="text" name="gen"><br>
+<label for="lev">Level : </label><br>
+<select name="lev">
+  <option disabled selected value></option>
+  <option value="First">1</option>
+  <option value="Second">2</option>
+  <option value="Third">3</option>
+  <option value="Fourth">4</option>
+</select><br>
+<label for="stuts">Status : </label>
+<select name="stuts"><br>
+  <option value="active">Active</option>
+  <option value="inactive">inactive</option>
+</select><br>
+<label for="dep">Department : </label><br>
+<select name="dep">
+  <option disabled selected value></option>
+  <option value="CS">Computer Science</option>
+  <option value="AI">Artificial Intelligence </option>
+  <option value="IS">Information System</option>
+  <option value="IT">Information Technology</option>
+</select><br>
+<label for="email">Email : </label><br>
+<input type="email" name="email"><br>
+<label for="Mobile">Mobile Number : </label><br>
+<input type="text" name="Mobile"><br>
+<button type="submit"> submit</button>
+
+
+</form>
+
+
+<script src ="{% static 'js/Add.js' %}"  ></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Home Page</title> 
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/Home.css'%}">
+    </head>
+
+
+<body>
+    <h1>Choose the desired site</h1> <br><br>
+<hr>
+    <ul>
+        <li> <a href = ""> Human Resources</a></li>
+        <li> <a href="{% url 'Add' %}"> Students Affairs</a></li>
+        <li> <a href = ""> Higher Studies</a></li>
+        <li> <a href = ""> Laboratory Tracking</a></li>
+    </ul>
+
+
+</body>
+
+
+</html>
